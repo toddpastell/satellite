@@ -11,6 +11,8 @@ end
 
 function scene:destroy()
   tag.all:each("destroy")
+  task:clear()
+  camera()
 end
 
 function scene:load(next)

@@ -1,4 +1,5 @@
 label = entity:extend({
+  tags = { "all", "ui" },
   text = "",
   color = 7,
 })

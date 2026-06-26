@@ -18,13 +18,15 @@ function tag:each(method, ...)
   end
 end
 
--- function tag:for_e(fn, ...)
---   for entity, _ in pairs(self.pool) do
---     fn(entity, ...)
---   end
--- end
+function tag:walk(fn, ...)
+  for entity, _ in pairs(self.pool) do
+    fn(entity, ...)
+  end
+end
 
 tag.all = tag()
+tag.bg = tag()
+tag.fg = tag()
 tag.ui = tag()
 tag.mine = tag()
 tag.planet = tag()
