@@ -13,6 +13,7 @@ function scene:destroy()
   tag.all:each("destroy")
   task:clear()
   camera()
+  music(-1)
 end
 
 function scene:load(next)

@@ -10,7 +10,7 @@ entity = class:extend({
 
 function entity:init()
   for _, t in ipairs(self.tags) do
-    assert(tag[t], "Unknown tag: " .. t)
+    assert(tag[t], "unknown tag: " .. t)
     tag[t]:add(self)
   end
 end

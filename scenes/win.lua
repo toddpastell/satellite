@@ -5,9 +5,9 @@ function win:init()
   label({ center_x = true, y = 24, text = "⁶w⁶t⁶oc40mission" })
   label({ center_x = true, y = 44, text = "⁶w⁶t⁶oc40complete" })
   label({ center_x = true, y = 74, text = "next level" })
-  label({ x = 100, y = 74, text = "🅾️" })
+  label({ x = 100, y = 74, text = "🅾️", color = 8 })
   label({ center_x = true, y = 86, text = "to title" })
-  label({ x = 100, y = 86, text = "❎" })
+  label({ x = 100, y = 86, text = "❎", color = 14 })
 end
 
 function win:update()

@@ -6,8 +6,8 @@ planet = entity:extend({
 })
 
 function planet:did_init()
-  local length = self.radius * 2
-  self.body = { x = -self.radius, y = -self.radius, width = length, height = length }
+  local length = self.radius * 2 + 10
+  self.body = { x = -self.radius - 5, y = -self.radius - 5, width = length, height = length }
   self.color = rnd({ 2, 3, 4, 8, 9, 13, 14, 15 })
 end
 

@@ -1,5 +1,5 @@
 RADIAL_SPEED = 1
-SPEED = 3
+SPEED = 2
 
 satellite = sprite:extend({
   tags = { "all", "satellite" },
@@ -26,6 +26,7 @@ function satellite:update()
       self.dx = self.dx + nx * input * RADIAL_SPEED
       self.dy = self.dy + ny * input * RADIAL_SPEED
       smoke({ x = self.x, y = self.y, dx = -nx * input * RADIAL_SPEED, dy = -ny * input * RADIAL_SPEED })
+      sfx(17)
     end
   else
     tag.planet:each("collides", self, function(p)
@@ -34,12 +35,14 @@ function satellite:update()
       self.target = p
       local dx, dy = vec_sub(self.x, self.y, self.target.x, self.target.y)
       self.rot = sgn(vec_cross(dx, dy, self.dx, self.dy))
+      sfx(18)
     end)
   end
 
   if btnp(4) then
     self.prev_target = self.target
     self.target = nil
+    sfx(21)
   end
 
   self.x = self.x + self.dx
